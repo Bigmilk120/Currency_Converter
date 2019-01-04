@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Scanner;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.ParseException;
@@ -54,8 +55,21 @@ public class main {
         }
     }
     
+    public static void testingUser() {
+    	System.out.println("Hello. Are you there? Please press 'y' to go next.");
+    	Scanner reader = new Scanner(System.in);
+    	String sign = reader.nextLine();
+    	if(sign.equals("y")||sign.equals("yes")||sign.equals("Y")||sign.equals("YES")) {
+    		
+    	}else {
+    		System.out.println("I will now close");
+    		System.exit(0);
+    	}
+    }
     
-    public static void main() throws IOException{
+    
+    public static void main(String [] args) throws IOException{
+    	testingUser();
         sendLiveRequest();
         httpClient.close();
         new BufferedReader(new InputStreamReader(System.in)).readLine();
