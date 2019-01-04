@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/Projects/Currency_Converter/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="E:/Projects/Currency_Converter/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/Projects/Currency_Converter/fluent-hc-4.5.6.jar"/>
+	<classpathentry kind="lib" path="E:/Projects/Currency_Converter/httpclient-4.5.6.jar"/>
+	<classpathentry kind="lib" path="E:/Projects/Currency_Converter/httpclient-cache-4.5.6.jar"/>
+	<classpathentry kind="lib" path="E:/Projects/Currency_Converter/httpclient-win-4.5.6.jar"/>
+	<classpathentry kind="lib" path="E:/Projects/Currency_Converter/httpcore-4.4.10.jar"/>
+	<classpathentry kind="lib" path="E:/Projects/Currency_Converter/httpmime-4.5.6.jar"/>
+	<classpathentry kind="lib" path="E:/Projects/Currency_Converter/jna-4.4.0.jar"/>
+	<classpathentry kind="lib" path="E:/Projects/Currency_Converter/jna-platform-4.4.0.jar"/>
+	<classpathentry kind="lib" path="E:/Pobierane/json-20140107.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
