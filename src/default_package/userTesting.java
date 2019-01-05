@@ -2,6 +2,8 @@ package default_package;
 
 import java.util.Scanner;
 
+import javax.swing.JFrame;
+
 public class userTesting {
 	 private static Scanner reader;
 
