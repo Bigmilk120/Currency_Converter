@@ -9,8 +9,7 @@ public class currencyAsker {
     	
         System.out.println("Enter shortcut to the currency you want to convert.\n");
         currency=reader.nextLine().toUpperCase();            
-        
-        reader.close();
+
         return currency;
     }
 
