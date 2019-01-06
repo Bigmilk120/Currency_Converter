@@ -3,7 +3,7 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 public class gui extends JFrame{
-    private JFrame myFrame;
+    static JFrame myFrame;
 
 	public gui(){
     	SwingUtilities.invokeLater(new Runnable() {  
@@ -15,7 +15,7 @@ public class gui extends JFrame{
     	});
     	
     };
-    public JFrame getFrame() {
+    public static JFrame getFrame() {
         return myFrame;
     }
 }
