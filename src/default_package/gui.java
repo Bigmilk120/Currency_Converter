@@ -1,5 +1,6 @@
 package default_package;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
 public class gui extends JFrame{
@@ -11,6 +12,7 @@ public class gui extends JFrame{
 	    		myFrame=new JFrame("Currency Converter");
 	    		myFrame.setSize(600,400);
 	    		myFrame.setVisible(true);
+	    		
 	    	}
     	});
     	

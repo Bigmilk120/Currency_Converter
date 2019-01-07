@@ -14,8 +14,4 @@ public class main extends JFrame{
     	double amount = amountAsker.askForAmount();
         liveRequest.sendLiveRequest(currency,amount);
     }
-
-    public static JFrame getFrame() {
-        return myFrame;
-    }
 }
