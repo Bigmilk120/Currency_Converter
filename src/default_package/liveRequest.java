@@ -1,9 +1,14 @@
 package default_package;
 
+import java.awt.Dimension;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.ParseException;
@@ -21,9 +26,14 @@ public class liveRequest {
     public static final String BASE_URL = "http://apilayer.net/api/";
     public static final String ENDPOINT = "live";
     static CloseableHttpClient httpClient = HttpClients.createDefault();
+	static JLabel label = new JLabel("Live Currency Exchange Rates");
 
+    
 	public static void sendLiveRequest(String currency, Double amount){
 
+		JFrame myFrame = gui.getFrame();
+		JPanel mainPanel = gui.getPanel();
+		
         HttpGet get = new HttpGet(BASE_URL + ENDPOINT + "?access_key=" + ACCESS_KEY);
 
         try {
@@ -31,15 +41,16 @@ public class liveRequest {
             HttpEntity entity = response.getEntity();
 
             JSONObject exchangeRates = new JSONObject(EntityUtils.toString(entity));
-            System.out.println("Live Currency Exchange Rates");
+    		mainPanel.add(label);
 
 
             Date timeStampDate = new Date((long)(exchangeRates.getLong("timestamp")*1000)); 
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss a");
             String formattedDate = dateFormat.format(timeStampDate);
-            System.out.println(amount+" " + exchangeRates.getString("source") + " in "+currency+" : " + amount*exchangeRates.getJSONObject("quotes").getDouble("USD"+currency) + " (Date: " + formattedDate + ")");   
-            System.out.println("\n");
+            JLabel labelAmount = new JLabel(amount+" " + exchangeRates.getString("source") + " in "+currency+" : " + amount*exchangeRates.getJSONObject("quotes").getDouble("USD"+currency) + " (Date: " + formattedDate + ")");   
+            mainPanel.add(labelAmount);
             response.close();
+            myFrame.setVisible(true);
         } catch (ClientProtocolException e) {
             e.printStackTrace();
         } catch (IOException e) {
