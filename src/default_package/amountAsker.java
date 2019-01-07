@@ -9,19 +9,20 @@ public class amountAsker {
 	static JLabel label = new JLabel("How much money do you want to change?");
 	
 	public static double askForAmount(){
+		System.out.println("Halloooo");
 		
-		
+
 		JFrame myFrame = gui.getFrame();
 		JPanel mainPanel = gui.getPanel();
 		
 		mainPanel.add(label);
 		
-		System.out.println("");
+		
 		@SuppressWarnings("resource")
 		Scanner reader = new Scanner(System.in);
 		double money=reader.nextDouble();
 		
-		myFrame.setVisible(true);
+		mainPanel.repaint();
 		return money;
 	}
 }

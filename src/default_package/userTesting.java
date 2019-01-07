@@ -29,7 +29,11 @@ public class userTesting extends JFrame{
 		    	{
 		    	  public void actionPerformed(ActionEvent e)
 		    	  {
-		    		 amountAsker.askForAmount();
+		    		  new Thread() {
+		    			  public void run() {
+				    		  amountAsker.askForAmount();
+		    			  }
+		    		  }.start();
 		    	  }
 		    	});
 	    		mainPanel.add(label);
