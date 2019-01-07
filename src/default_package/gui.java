@@ -2,7 +2,11 @@ package default_package;
 import javax.swing.*;
 
 public class gui extends JFrame{
-    static JFrame myFrame;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	static JFrame myFrame;
     static JPanel mainPanel;
 	public gui(){
     	SwingUtilities.invokeLater(new Runnable() {  

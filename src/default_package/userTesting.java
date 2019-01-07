@@ -1,13 +1,16 @@
 package default_package;
 
-import java.awt.Dimension;
 import java.awt.event.*;
 import java.util.Scanner;
 
 import javax.swing.*;
 
 public class userTesting extends JFrame{
-	 private static Scanner reader;
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = 2L;
+	private static Scanner reader;
 	 private static JLabel label = new JLabel("Witaj!");
 	 private static JLabel label_bye = new JLabel("Żegnaj!");
 	 private static JButton button = new JButton("Click me!");
@@ -26,7 +29,7 @@ public class userTesting extends JFrame{
 		    	{
 		    	  public void actionPerformed(ActionEvent e)
 		    	  {
-		    		 amountAsker.askForAmount(mainPanel);
+		    		 amountAsker.askForAmount();
 		    	  }
 		    	});
 	    		mainPanel.add(label);

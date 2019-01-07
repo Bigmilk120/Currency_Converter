@@ -8,7 +8,8 @@ public class amountAsker {
 
 	static JLabel label = new JLabel("How much money do you want to change?");
 	
-	public static double askForAmount(JPanel panel){
+	public static double askForAmount(){
+		
 		
 		JFrame myFrame = gui.getFrame();
 		JPanel mainPanel = gui.getPanel();
@@ -16,8 +17,11 @@ public class amountAsker {
 		mainPanel.add(label);
 		
 		System.out.println("");
+		@SuppressWarnings("resource")
 		Scanner reader = new Scanner(System.in);
 		double money=reader.nextDouble();
+		
+		myFrame.setVisible(true);
 		return money;
 	}
 }
