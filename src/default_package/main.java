@@ -11,7 +11,7 @@ public class main extends JFrame{
         JFrame frame = window.getFrame();
         userTesting.testingUser();
     	String currency=currencyAsker.askForCurrency();
-    	double amount = amountAsker.askForAmount();
-        liveRequest.sendLiveRequest(currency,amount);
+    	//double amount = amountAsker.askForAmount();
+        //liveRequest.sendLiveRequest(currency,amount);
     }
 }
