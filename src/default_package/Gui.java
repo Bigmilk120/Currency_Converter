@@ -3,26 +3,25 @@ import javax.swing.*;
 
 import com.sun.javafx.text.GlyphLayout;
 
-public class gui extends JFrame{
+public class Gui extends JFrame{
     /**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	static JFrame myFrame;
     static JPanel mainPanel;
-	public gui(){
+	public Gui(){
     	SwingUtilities.invokeLater(new Runnable() {  
 	    	public void run() {
 	    		myFrame=new JFrame("Currency Converter");
-	    		myFrame.setSize(600,400);
+	    		myFrame.setSize(400,200);
 	    		myFrame.setVisible(true);
 	    		
 	    		mainPanel = new JPanel();
 	    		mainPanel.setLayout(new BoxLayout(mainPanel, GlyphLayout.LAYOUT_LEFT_TO_RIGHT));
 	    		
 	            myFrame.getContentPane().add(mainPanel);
-	           // myFrame.pack();
-	    		
+	            myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    	}
     	});
     	

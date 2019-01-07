@@ -4,17 +4,16 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
-public class userTesting extends JFrame{
-	 /**
-	 * 
-	 */
+public class Starter extends JFrame{
+
 	private static final long serialVersionUID = 2L;
 	private static JLabel label = new JLabel("To go next, click the button!");
 	private static JButton button = new JButton("Click me!");
-	public static void testingUser() 
+	
+	public static void run() 
 	{
-			JFrame myFrame = gui.getFrame();
-			JPanel mainPanel = gui.getPanel();
+			JFrame myFrame = Gui.getFrame();
+			JPanel mainPanel = Gui.getPanel();
 	    	
 
 		    button.addActionListener(new ActionListener()
@@ -23,7 +22,9 @@ public class userTesting extends JFrame{
 		   	  {
 		   		  new Thread() {
 		   			  public void run() {
-			    		  amountAsker.askForAmount();
+		   				  label.setVisible(false);
+		   				  button.setVisible(false);
+			    		  AmountAsker.askForAmount();
 	    			  }
 		   		  }.start();
 		    	 }

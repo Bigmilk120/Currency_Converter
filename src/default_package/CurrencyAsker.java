@@ -10,15 +10,15 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class currencyAsker {
+public class CurrencyAsker {
 
 	private static JTextField input = new JTextField(15);	
 	static JLabel label = new JLabel("Enter shortcut to the currency you want to convert.");
 	private static JButton button = new JButton("Go next!");
 
 	public static  void askForCurrency(double amount) {
-    	JFrame myFrame = gui.getFrame();
-		JPanel mainPanel = gui.getPanel();
+    	JFrame myFrame = Gui.getFrame();
+		JPanel mainPanel = Gui.getPanel();
 		input.setMaximumSize(new Dimension(400,50));
 		mainPanel.add(label);
 		mainPanel.add(input);
@@ -29,7 +29,10 @@ public class currencyAsker {
 	   	  {
 	   		  new Thread() {
 	   			  public void run() {
-		    		  liveRequest.sendLiveRequest(input.getText().toUpperCase(), amount);
+	   				  label.setVisible(false);
+	   				  input.setVisible(false);
+	   				  button.setVisible(false);
+		    		  LiveRequest.sendLiveRequest(input.getText().toUpperCase(), amount);
     			  }
 	   		  }.start();
 	    	 }

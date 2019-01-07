@@ -1,6 +1,5 @@
 package default_package;
 
-import java.awt.Dimension;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -21,7 +20,7 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class liveRequest {
+public class LiveRequest {
 	public static final String ACCESS_KEY = "5794ecf11594dd5c16b5c4b84eb38336";
     public static final String BASE_URL = "http://apilayer.net/api/";
     public static final String ENDPOINT = "live";
@@ -31,8 +30,8 @@ public class liveRequest {
     
 	public static void sendLiveRequest(String currency, Double amount){
 
-		JFrame myFrame = gui.getFrame();
-		JPanel mainPanel = gui.getPanel();
+		JFrame myFrame = Gui.getFrame();
+		JPanel mainPanel = Gui.getPanel();
 		
         HttpGet get = new HttpGet(BASE_URL + ENDPOINT + "?access_key=" + ACCESS_KEY);
 

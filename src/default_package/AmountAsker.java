@@ -7,15 +7,15 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class amountAsker {
+public class AmountAsker {
 
 	static JLabel label = new JLabel("How much money do you want to change?");
 	private static JButton button = new JButton("Go next!");
 	private static JTextField input = new JTextField(15);	
 	
 	public static void askForAmount(){		
-		JFrame myFrame = gui.getFrame();
-		JPanel mainPanel = gui.getPanel();
+		JFrame myFrame = Gui.getFrame();
+		JPanel mainPanel = Gui.getPanel();
 		input.setMaximumSize(new Dimension(400,50));
 		mainPanel.add(label);
 		mainPanel.add(input);
@@ -26,7 +26,10 @@ public class amountAsker {
 	   	  {
 	   		  new Thread() {
 	   			  public void run() {
-		    		  currencyAsker.askForCurrency(Double.parseDouble(input.getText()));
+	   				  label.setVisible(false);
+	   				  button.setVisible(false);
+	   				  input.setVisible(false);
+		    		  CurrencyAsker.askForCurrency(Double.parseDouble(input.getText()));
     			  }
 	   		  }.start();
 	    	 }
