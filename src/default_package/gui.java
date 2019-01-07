@@ -1,6 +1,8 @@
 package default_package;
 import javax.swing.*;
 
+import com.sun.javafx.text.GlyphLayout;
+
 public class gui extends JFrame{
     /**
 	 * 
@@ -16,7 +18,7 @@ public class gui extends JFrame{
 	    		myFrame.setVisible(true);
 	    		
 	    		mainPanel = new JPanel();
-	    		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
+	    		mainPanel.setLayout(new BoxLayout(mainPanel, GlyphLayout.LAYOUT_LEFT_TO_RIGHT));
 	    		
 	            myFrame.getContentPane().add(mainPanel);
 	           // myFrame.pack();

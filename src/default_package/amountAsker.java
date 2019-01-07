@@ -1,33 +1,24 @@
 package default_package;
 
-import java.util.Scanner;
+
+import java.awt.Dimension;
 
 import javax.swing.*;
 
 public class amountAsker {
 
 	static JLabel label = new JLabel("How much money do you want to change?");
-	static JTextField amount = new JTextField(20);
+	private static JButton button = new JButton("Go next!");
+	private static JTextField input = new JTextField(15);	
 	
-	public static double askForAmount(){
-		System.out.println("Halloooo");
-		
-		
+	public static double askForAmount(){		
 		JFrame myFrame = gui.getFrame();
 		JPanel mainPanel = gui.getPanel();
-		
-		
-		
-		
+		input.setMaximumSize(new Dimension(400,50));
 		mainPanel.add(label);
-		mainPanel.add(amount);
+		mainPanel.add(input);
+		mainPanel.add(button);
 		
-		
-		/*@SuppressWarnings("resource")
-		Scanner reader = new Scanner(System.in);
-		double money=reader.nextDouble(); */
-		
-
 		myFrame.setVisible(true);
 		return 100;
 	}
