@@ -1,9 +1,8 @@
 package default_package;
 
+import java.awt.Dimension;
 import java.util.Scanner;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.*;
 
 public class userTesting extends JFrame{
@@ -19,17 +18,22 @@ public class userTesting extends JFrame{
 	    	System.out.println("Hello. Are you there? Please press 'y' to go next.");
 	    	reader = new Scanner(System.in);
 	    	String sign = reader.nextLine();
-	    	
-	    	
+	    	//button.setPreferredSize(new Dimension(100, 100));
+	    	//button.setBounds(20,30,50,30);
+	  
+	    	JPanel mainPanel=gui.getPanel();
+
 	    	
 	    	
 	    	if(sign.equals("y")||sign.equals("yes")||sign.equals("Y")||sign.equals("YES")) {
-	    		myFrame.add(label);
+	    		mainPanel.add(label);
+	    		mainPanel.add(button);
 	    	}else {
-	    		myFrame.add(label_bye);
+	    		mainPanel.add(label_bye);
 	    		//System.out.println("I will now close");
 	    		//System.exit(0);
 	    	}
+	    	mainPanel.setVisible(true);
 	    	myFrame.setVisible(true);
 	    }
 }
