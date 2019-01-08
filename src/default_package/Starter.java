@@ -1,6 +1,7 @@
 package default_package;
 
 import java.awt.event.*;
+import java.util.Optional;
 
 import javax.swing.*;
 
@@ -10,11 +11,12 @@ public class Starter extends JFrame{
 	private static JLabel text = new JLabel("To go next, click the button!");
 	private static JButton click = new JButton("Click me!");
 	
-	public static void run() 
+	public static void run() throws InterruptedException 
 	{
 			JFrame myFrame = Gui.getFrame();
 			JPanel mainPanel = Gui.getPanel();
 	    	
+			Thread.sleep(500);
 			
 	    	mainPanel.add(text);
 	   		mainPanel.add(click);

@@ -4,9 +4,6 @@ import javax.swing.*;
 import com.sun.javafx.text.GlyphLayout;
 
 public class Gui extends JFrame{
-    /**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	static JFrame myFrame;
     static JPanel mainPanel;

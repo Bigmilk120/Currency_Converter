@@ -6,7 +6,7 @@ public class Main extends JFrame{
 	
 	private static final long serialVersionUID = 0L;
 	static JFrame myFrame = new JFrame();
-    public static void main(final String [] args) {
+    public static void main(final String [] args) throws InterruptedException {
 		@SuppressWarnings("unused")
 		Gui window= new Gui();
 		Starter.run();
