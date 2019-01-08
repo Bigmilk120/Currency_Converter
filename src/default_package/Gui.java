@@ -15,13 +15,14 @@ public class Gui extends JFrame{
 	    	public void run() {
 	    		myFrame=new JFrame("Currency Converter");
 	    		myFrame.setSize(400,200);
-	    		myFrame.setVisible(true);
 	    		
 	    		mainPanel = new JPanel();
 	    		mainPanel.setLayout(new BoxLayout(mainPanel, GlyphLayout.LAYOUT_LEFT_TO_RIGHT));
 	    		
 	            myFrame.getContentPane().add(mainPanel);
 	            myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    		myFrame.setVisible(true);
+
 	    	}
     	});
     	

@@ -7,32 +7,32 @@ import javax.swing.*;
 public class Starter extends JFrame{
 
 	private static final long serialVersionUID = 2L;
-	private static JLabel label = new JLabel("To go next, click the button!");
-	private static JButton button = new JButton("Click me!");
+	private static JLabel text = new JLabel("To go next, click the button!");
+	private static JButton click = new JButton("Click me!");
 	
 	public static void run() 
 	{
 			JFrame myFrame = Gui.getFrame();
 			JPanel mainPanel = Gui.getPanel();
 	    	
-
-		    button.addActionListener(new ActionListener()
+			
+	    	mainPanel.add(text);
+	   		mainPanel.add(click);
+	   		
+	    	myFrame.setVisible(true);
+	    	
+	    	click.addActionListener(new ActionListener()
 		    {
 		   	  public void actionPerformed(ActionEvent e)
 		   	  {
 		   		  new Thread() {
 		   			  public void run() {
-		   				  label.setVisible(false);
-		   				  button.setVisible(false);
-			    		  AmountAsker.askForAmount();
+		   				text.setVisible(false);
+		   				click.setVisible(false);
+			    		AmountAsker.askForAmount();
 	    			  }
 		   		  }.start();
 		    	 }
 		    });
-	    	mainPanel.add(label);
-	   		mainPanel.add(button);
-	    		
-
-	    	myFrame.setVisible(true);
 	    }
 }
