@@ -26,10 +26,15 @@ public class AmountAsker {
 	   	  {
 	   		  new Thread() {
 	   			  public void run() {
-	   				  label.setVisible(false);
-	   				  button.setVisible(false);
-	   				  input.setVisible(false);
-		    		  CurrencyAsker.askForCurrency(Double.parseDouble(input.getText()));
+	   				 Double amount;
+	   				  try{
+	   					  amount = Double.parseDouble(input.getText());
+	   					  label.setVisible(false);
+		   				  button.setVisible(false);
+		   				  input.setVisible(false);
+		   				  CurrencyAsker.askForCurrency(amount);
+	   				  }catch(Exception ex) {
+	   				  }
     			  }
 	   		  }.start();
 	    	 }

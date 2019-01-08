@@ -23,16 +23,27 @@ public class CurrencyAsker {
 		mainPanel.add(label);
 		mainPanel.add(input);
 		mainPanel.add(button);
+		
+		String[] currencies = new String[] {"AED","AUD","BGN","BTC","CAD","CNY","EUR","HKD","INR","JPY","NOK","NZD","PLN","RSD","RUB","SEK","TRY","USD","XAG","XAU"};
+		
+		
 		button.addActionListener(new ActionListener()
 	    {
 	   	  public void actionPerformed(ActionEvent e)
 	   	  {
 	   		  new Thread() {
 	   			  public void run() {
-	   				  label.setVisible(false);
-	   				  input.setVisible(false);
-	   				  button.setVisible(false);
-		    		  LiveRequest.sendLiveRequest(input.getText().toUpperCase(), amount);
+	   				  
+	   				  String currency = input.getText().toUpperCase();
+	   				  for(int i=0;i<20;i++) {
+	   					  if(currency.equals(currencies[i])) {
+	   						  label.setVisible(false);
+	   						  input.setVisible(false);
+	   						  button.setVisible(false);
+	   			    		  LiveRequest.sendLiveRequest(currency, amount);
+	   					  }
+	   				  }
+	   				  
     			  }
 	   		  }.start();
 	    	 }
